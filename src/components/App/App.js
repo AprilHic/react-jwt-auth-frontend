@@ -11,6 +11,7 @@ import SignUpForm from '../SignUpForm/SignUpForm'
 import LogInForm from '../LogInForm/LogInForm'
 import LogOut from '../LogOut/LogOut'
 import Profile from '../Profile/Profile'
+import CreateForm from '../CreateForm/CreateForm'
 import './App.css'
 
 const databaseUrl = process.env.NODE_ENV === 'production' ? process.env.BACKEND_APP_URL : 'http://localhost:3000'
@@ -152,10 +153,17 @@ class App extends Component {
                 )
               }}
             />
-            <Route path='/profile'
+            <Route path='/createform'
               render={(props) => {
                 return (
                   <Profile isLoggedIn={this.state.isLoggedIn} user={this.state.user} />
+                )
+              }}
+            />
+            {/* <Route path='/CreateForm'
+              render={(props) => {
+                return (
+                  <Profile isLoggedIn={this.state.isLoggedIn} user={this.state.user} /> */}
                 )
               }}
             />
