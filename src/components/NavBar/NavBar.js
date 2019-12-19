@@ -17,7 +17,7 @@ class NavBar extends Component {
       navBarItems.push(<NavItem key={4} href='/login'>Log In</NavItem>)
     }
     return (
-      <Navbar brand='Create a project' className='nav' right>
+      <Navbar brand='WELCOME' className='nav' right>
 
         {navBarItems}
       </Navbar>
