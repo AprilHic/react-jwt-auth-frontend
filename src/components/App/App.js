@@ -11,6 +11,11 @@ import SignUpForm from '../SignUpForm/SignUpForm'
 import LogInForm from '../LogInForm/LogInForm'
 import LogOut from '../LogOut/LogOut'
 import Profile from '../Profile/Profile'
+import AboutPage from '../AboutPage/AboutPage'
+import GalleryView from '../GalleryView/GalleryView'
+import ProjectView from '../ProjectView/ProjectView'
+import ProjectList from '../ProjectList/ProjectList'
+import CreateProject from '../CreateProject/CreateProject'
 import './App.css'
 
 const databaseUrl = process.env.NODE_ENV === 'production' ? process.env.BACKEND_APP_URL : 'http://localhost:3000'
@@ -159,38 +164,38 @@ class App extends Component {
                 )
               }}
             />
-            <Route path='/'
+            <Route path='/AboutPage'
               render={(props) => {
                 return (
-                  <Profile />
+                  <AboutPage />
                 )
               }}
             />
-            <Route path='/'
+            <Route path='/GalleryView'
               render={(props) => {
                 return (
-                  <Profile />
+                  <GalleryView />
                 )
               }}
             />
-            <Route path='/'
+            <Route path='/CreateProject'
               render={(props) => {
                 return (
-                  <Profile />
+                  <CreateProject/>
                 )
               }}
             />
-            <Route path='/'
+            <Route path='/ProjectList'
               render={(props) => {
                 return (
-                  <Profile />
+                  <ProjectList />
                 )
               }}
             />
-            <Route path='/'
+            <Route path='/ProjectView'
               render={(props) => {
                 return (
-                  <Profile />
+                  <ProjectView/>
                 )
               }}
             />
