@@ -30,6 +30,11 @@ class App extends Component {
 
   componentDidMount() {
     if (localStorage.token) {
+      if (localStorage.user) {
+        this.setState({
+          user: JSON.parse(localStorage.user)
+        })
+      }
       this.setState({
         isLoggedIn: true
       })
@@ -115,6 +120,7 @@ class App extends Component {
       .then(response => {
         console.log(response)
         window.localStorage.setItem('token', response.data.token)
+        window.localStorage.setItem('user', JSON.stringify(response.data.user))
         this.setState({
           isLoggedIn: true,
           user: response.data.user,
@@ -164,35 +170,35 @@ class App extends Component {
                 )
               }}
             />
-            <Route path='/AboutPage'
+            <Route exact path='/'
               render={(props) => {
                 return (
                   <AboutPage />
                 )
               }}
             />
-            <Route path='/GalleryView'
+            <Route path='/galleryView'
               render={(props) => {
                 return (
                   <GalleryView />
                 )
               }}
             />
-            <Route path='/CreateProject'
+            <Route path='/createProject'
               render={(props) => {
                 return (
-                  <CreateProject/>
+                  <CreateProject history={this.props.history}/>
                 )
               }}
             />
-            <Route path='/ProjectList'
+            <Route path='/projectList'
               render={(props) => {
                 return (
                   <ProjectList />
                 )
               }}
             />
-            <Route path='/ProjectView'
+            <Route path='/projectView'
               render={(props) => {
                 return (
                   <ProjectView/>
