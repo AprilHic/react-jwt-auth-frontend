@@ -15,7 +15,7 @@ class NavBar extends Component {
         // navBarItems.push(<NavItem key={7} href='/projectView'>Project View</NavItem>)
         navBarItems.push(<NavItem key={8} href='/galleryView'>Gallery</NavItem>)
       }
-
+      
     } else {
       navBarItems.push(<NavItem key={3} href='/signup'>Sign Up</NavItem>)
       navBarItems.push(<NavItem key={10} href='/login'>Log In</NavItem>)
